@@ -1,0 +1,46 @@
+body {
+	font-family: sans-serif;
+}
+
+.text, .output {
+	padding: 10px;
+}
+
+.word {
+	line-height: 1.5em;
+	margin-right: 10px;
+}
+
+.word:after {
+	content: attr(data-word-type-name);
+	color: gray;
+	position: relative;
+	top: 5px;
+	font-size: 60%;
+}
+
+/* verbs */
+.word[data-word-type^=VB] {
+	color: green;
+	font-weight: bold;
+	font-style: italic;
+}
+
+/* nouns */
+.word[data-word-type^=N] {
+	color: blue;
+	font-style: bold;
+}
+
+/* adjectives */
+.word[data-word-type=JJ] {
+	color: orange;
+	font-weight: bold;
+	margin-right: 5px;
+}
+
+.word[data-word-type=JJ]:after {
+	display: none;
+}
+
+
